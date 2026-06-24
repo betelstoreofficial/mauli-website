@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   MAULI - "Dinner is not complete without a paan."
+   माऊली · Mother · Divine Blessing · Since 1990
+   ============================================================ */
+@theme {
+  --color-forest-950: #081410;
+  --color-forest-900: #0c1f17;
+  --color-forest-800: #11301f;
+  --color-forest-700: #18432a;
+  --color-forest-600: #205636;
+  --color-forest-500: #2c7140;
+  --color-forest-400: #45a05f;
+  --color-forest-300: #7bc88a;
+
+  --color-gold-600: #9a7230;
+  --color-gold-500: #b8892e;
+  --color-gold-400: #c9952a;
+  --color-gold-300: #d8b15a;
+  --color-gold-200: #e6c574;
+  --color-gold-100: #f2d89a;
+
+  --color-cream: #fbf7ee;
+  --color-cream-deep: #f3ead6;
+  --color-sand: #efe6d2;
+  --color-ink: #16201a;
+  --color-ink-soft: #3f5443;
+  --color-muted: #6f836f;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Jost', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: auto; }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--color-forest-950);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--color-gold-300); color: var(--color-forest-900); }
+  img { display: block; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
+
+  /* hide native cursor on pointer devices - the leaf is the cursor */
+  @media (hover: hover) and (pointer: fine) {
+    * { cursor: none !important; }
+  }
+}
+
+@layer utilities {
+  .text-display { font-family: var(--font-display); line-height: 1.02; letter-spacing: -0.03em; }
+  .eyebrow {
+    font-family: var(--font-sans); font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.26em; font-size: 0.68rem;
+  }
+  .gold-text { color: var(--color-gold-100); }
+  .gradient-gold {
+    background: linear-gradient(105deg, var(--color-gold-100), var(--color-gold-300) 50%, var(--color-gold-100));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .ink-gold {
+    background: linear-gradient(105deg, var(--color-gold-600), var(--color-gold-400) 55%, var(--color-gold-600));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* ---- rich forest gradients (replace flat dark) ---- */
+  .bg-forest-rich {
+    background:
+      radial-gradient(120% 80% at 85% -10%, rgba(212,168,74,0.16) 0%, transparent 50%),
+      radial-gradient(90% 70% at 0% 100%, rgba(45,113,64,0.35) 0%, transparent 55%),
+      linear-gradient(160deg, #081410 0%, #0c1f17 40%, #11301f 100%);
+  }
+  .bg-forest-deep {
+    background:
+      radial-gradient(100% 60% at 50% 0%, rgba(45,113,64,0.22) 0%, transparent 60%),
+      linear-gradient(180deg, #0c1f17 0%, #081410 100%);
+  }
+  .bg-forest-emerald {
+    background:
+      radial-gradient(120% 90% at 10% 10%, rgba(69,160,95,0.22) 0%, transparent 55%),
+      radial-gradient(100% 80% at 100% 100%, rgba(212,168,74,0.12) 0%, transparent 55%),
+      linear-gradient(150deg, #11301f 0%, #18432a 55%, #0c1f17 100%);
+  }
+  /* ---- warm cream gradients (replace flat white) ---- */
+  .bg-cream-rich {
+    background:
+      radial-gradient(90% 70% at 100% 0%, rgba(212,168,74,0.10) 0%, transparent 55%),
+      radial-gradient(80% 60% at 0% 100%, rgba(45,113,64,0.08) 0%, transparent 55%),
+      linear-gradient(165deg, #fbf7ee 0%, #f3ead6 100%);
+  }
+
+  /* film grain (cheap, no blend-mode) */
+  .grain::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { scrollbar-width: none; }
+}
+
+/* ---- trust marquee (kept gentle even under reduced-motion; class beats the universal reset) ---- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 38s linear infinite !important;
+  animation-duration: 38s !important;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ---- Apple-style frosted glass bottom bar ---- */
+.glass-bar {
+  background: rgba(14, 32, 23, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 10px 40px -8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+@supports (backdrop-filter: blur(1px)) {
+  .glass-bar {
+    background: rgba(14, 32, 23, 0.4);
+    backdrop-filter: saturate(180%) blur(22px);
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+  }
+}
+
+/* ---- leaf cursor (pointer devices only) ---- */
+.cursor-leaf {
+  position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
+  width: 28px; height: 28px;
+  margin: -14px 0 0 -14px;
+  will-change: transform;
+  filter: drop-shadow(0 3px 7px rgba(0,0,0,0.3));
+  transition: opacity 0.3s;
+}
+@media (hover: none), (pointer: coarse) { .cursor-leaf { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
