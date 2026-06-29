@@ -38,7 +38,7 @@ export default function Signatures() {
               viewport={{ once: true, margin: '-8% 0px' }}
               transition={{ duration: 0.8, ease: EASE, delay: (i % 3) * 0.08 }}
               data-cursor="grow"
-              className="group relative overflow-hidden rounded-[3px] border border-cream/10 bg-forest-800"
+              className="group relative overflow-hidden rounded-2xl border border-cream/10 bg-forest-800"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img

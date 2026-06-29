@@ -23,7 +23,7 @@ export default function FAQ({
   const [open, setOpen] = useState<number | null>(0)
   const dark = tone === 'dark'
   return (
-    <section className={`${bg} relative overflow-hidden py-20 md:py-28`}>
+    <section className={`${bg} relative overflow-hidden py-24 md:py-32`}>
       <div className="mx-auto max-w-[820px] px-6 md:px-10">
         <div className="mb-10 text-center">
           <Reveal><span className={`eyebrow ${dark ? 'gold-text' : 'text-gold-600'}`}>{eyebrow}</span></Reveal>

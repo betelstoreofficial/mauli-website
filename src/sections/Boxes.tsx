@@ -45,7 +45,7 @@ export default function Boxes() {
               viewport={{ once: true, margin: '-8% 0px' }}
               transition={{ duration: 0.8, ease: EASE, delay: i * 0.08 }}
               data-cursor="grow"
-              className={`group relative flex flex-col overflow-hidden rounded-[3px] border transition-all duration-500 ${
+              className={`group relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-500 ${
                 box.hero
                   ? 'border-gold-300/50 bg-gradient-to-b from-forest-700/60 to-forest-800 xl:row-span-1'
                   : 'border-cream/10 bg-forest-800/60 hover:border-gold-300/30'

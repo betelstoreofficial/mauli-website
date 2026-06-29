@@ -12,7 +12,7 @@ export default function Catering({ showBanner = true }: { showBanner?: boolean }
       {showBanner && (
       <Reveal y={0}>
         <div className="relative mx-auto mb-20 max-w-[1480px] px-6 md:px-10">
-          <Parallax amount={50} className="aspect-[16/10] overflow-hidden rounded-[3px] md:aspect-[21/9]">
+          <Parallax amount={50} className="aspect-[16/10] overflow-hidden rounded-2xl md:aspect-[21/9]">
             <img src="/img/catering/catering-banner.jpg" alt="Mauli premium paan catering setup at a celebration" className="h-[116%] w-full object-cover" loading="lazy" decoding="async" />
           </Parallax>
           <div className="absolute inset-0 flex items-end bg-gradient-to-t from-forest-950/90 via-forest-950/30 to-forest-950/10 md:items-center md:bg-gradient-to-r md:from-forest-950/85 md:via-forest-950/35 md:to-transparent">
@@ -46,7 +46,7 @@ export default function Catering({ showBanner = true }: { showBanner?: boolean }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-8% 0px' }}
               transition={{ duration: 0.8, ease: EASE, delay: i * 0.1 }}
-              className={`relative flex flex-col rounded-[3px] border p-7 transition-all duration-500 ${
+              className={`relative flex flex-col rounded-2xl border p-7 transition-all duration-500 ${
                 pkg.hero
                   ? 'border-gold-300/50 bg-gradient-to-b from-forest-700/50 to-forest-800'
                   : 'border-cream/10 bg-forest-900/50 hover:border-gold-300/25'
@@ -95,7 +95,7 @@ export default function Catering({ showBanner = true }: { showBanner?: boolean }
         <div className="mt-16 grid gap-4 md:grid-cols-3">
           {CATERING_ADDONS.map((a, i) => (
             <Reveal key={a.name} delay={i * 0.08}>
-              <div className="h-full rounded-[3px] border border-cream/10 bg-forest-900/40 p-6">
+              <div className="h-full rounded-2xl border border-cream/10 bg-forest-900/40 p-6">
                 <div className="eyebrow text-[0.55rem] text-gold-300/60">Add-on Experience</div>
                 <h4 className="text-display mt-2 text-lg font-bold text-cream">{a.name}</h4>
                 <p className="mt-2 text-[0.76rem] font-light leading-relaxed text-cream/50">{a.blurb}</p>
@@ -106,7 +106,7 @@ export default function Catering({ showBanner = true }: { showBanner?: boolean }
 
         {/* closing band */}
         <Reveal>
-          <div className="mt-14 flex flex-col items-center gap-6 rounded-[3px] border border-gold-300/20 bg-gradient-to-r from-forest-800/60 to-forest-700/40 px-8 py-10 text-center">
+          <div className="mt-14 flex flex-col items-center gap-6 rounded-2xl border border-gold-300/20 bg-gradient-to-r from-forest-800/60 to-forest-700/40 px-8 py-10 text-center">
             <p className="text-display max-w-[24ch] text-2xl font-bold italic text-cream md:text-3xl">
               You bring the vision. We bring the hospitality.
             </p>

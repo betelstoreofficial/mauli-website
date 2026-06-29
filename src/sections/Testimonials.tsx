@@ -7,12 +7,12 @@ const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function Testimonials() {
   return (
-    <section className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
+    <section className="bg-forest-rich grain relative overflow-hidden py-24 md:py-32">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="mb-14 text-center">
-          <Reveal><span className="eyebrow text-gold-600">Loved across India</span></Reveal>
+          <Reveal><span className="eyebrow gold-text">Loved across India</span></Reveal>
           <Reveal delay={0.05}>
-            <h2 className="text-display mx-auto mt-3 max-w-[16ch] text-[clamp(1.9rem,4.2vw,3.2rem)] font-bold leading-[1.08] text-ink">
+            <h2 className="text-display mx-auto mt-3 max-w-[16ch] text-[clamp(1.9rem,4.2vw,3.2rem)] font-bold leading-[1.08] text-cream">
               The paan people remember.
             </h2>
           </Reveal>
@@ -27,15 +27,15 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-8% 0px' }}
               transition={{ duration: 0.8, ease: EASE, delay: i * 0.1 }}
-              className="flex h-full flex-col rounded-[4px] border border-ink/10 bg-white/70 p-7"
+              className="flex h-full flex-col rounded-2xl border border-cream/10 bg-forest-900/40 p-7"
             >
-              <div className="text-display text-4xl leading-none text-gold-400">“</div>
-              <blockquote className="mt-2 flex-1 text-[0.96rem] font-light italic leading-relaxed text-ink-soft">
+              <div className="text-display text-4xl leading-none text-gold-300">“</div>
+              <blockquote className="mt-2 flex-1 text-[0.96rem] font-light italic leading-relaxed text-cream/70">
                 {t.quote}
               </blockquote>
-              <figcaption className="mt-5 border-t border-ink/8 pt-4">
-                <div className="text-[0.86rem] font-semibold text-ink">{t.author}</div>
-                <div className="text-[0.72rem] text-muted">{t.role}</div>
+              <figcaption className="mt-5 border-t border-cream/10 pt-4">
+                <div className="text-[0.86rem] font-semibold text-cream">{t.author}</div>
+                <div className="text-[0.72rem] text-cream/45">{t.role}</div>
               </figcaption>
             </motion.figure>
           ))}

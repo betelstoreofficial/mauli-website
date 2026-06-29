@@ -6,7 +6,7 @@ export default function FranchiseTeaser() {
   return (
     <section className="bg-forest-deep grain relative overflow-hidden py-24 md:py-32">
       <div className="mx-auto max-w-[1480px] px-6 md:px-10">
-        <div className="relative overflow-hidden rounded-[5px] border border-gold-300/20">
+        <div className="relative overflow-hidden rounded-2xl border border-gold-300/20">
           <Parallax amount={40} className="absolute inset-0 -z-0 h-full">
             <img src="/img/franchise/counter-closed.jpg" alt="Mauli franchise live paan counter" className="h-[120%] w-full object-cover" loading="lazy" decoding="async" />
           </Parallax>

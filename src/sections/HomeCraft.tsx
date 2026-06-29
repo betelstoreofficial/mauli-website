@@ -33,7 +33,7 @@ export default function HomeCraft() {
 
         <ScrollFade lift={40}>
           <div className="relative">
-            <Parallax amount={28} className="aspect-[4/5] overflow-hidden rounded-[4px] shadow-[0_30px_70px_-40px_rgba(0,0,0,0.5)]">
+            <Parallax amount={28} className="aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_70px_-40px_rgba(0,0,0,0.5)]">
               <img src="/img/catering/signature.png" alt="Mauli paan, handcrafted and finished with silver varakh" className="h-[110%] w-full object-cover" loading="lazy" decoding="async" />
             </Parallax>
             <div className="absolute -bottom-6 -left-6 hidden border border-gold-500/30 bg-cream px-7 py-5 shadow-xl md:block">

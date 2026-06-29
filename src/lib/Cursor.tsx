@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-/** Paan-cone cursor — a folded green paan cone with a toothpick & cherry on top.
+/** Paan-cone cursor - a folded green paan cone with a toothpick & cherry on top.
  *  Follows with a soft lag; scales up over interactive targets. Scale is baked into the
  *  transform string (never CSS `scale`) to avoid the jump/glitch. */
 export default function Cursor() {

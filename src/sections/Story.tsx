@@ -1,4 +1,4 @@
-import { Reveal, RevealHeading, Parallax } from '@/lib/motion'
+import { Reveal, RevealHeading } from '@/lib/motion'
 
 const PILLARS = [
   { k: '16', label: 'Ayurvedic herbs', note: 'in every blend' },
@@ -9,7 +9,7 @@ const PILLARS = [
 
 export default function Story() {
   return (
-    <section id="craft" className="bg-cream-rich relative overflow-hidden py-24 md:py-36">
+    <section id="craft" className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
       <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
         {/* text */}
         <div>
@@ -44,21 +44,21 @@ export default function Story() {
           </div>
         </div>
 
-        {/* image */}
+        {/* image - shown in full */}
         <Reveal y={40}>
           <div className="relative">
-            <Parallax amount={28} className="aspect-[4/5] overflow-hidden rounded-[2px]">
+            <div className="overflow-hidden rounded-2xl border border-gold-500/15 bg-forest-900 shadow-[0_28px_70px_-40px_rgba(0,0,0,0.5)]">
               <img
                 src="/img/catering/signature.jpeg"
-                alt="Mauli signature paan presentation"
-                className="h-[110%] w-full object-cover"
+                alt="Mauli signature ingredients - handcrafted paan"
+                className="h-auto w-full"
                 loading="lazy"
                 decoding="async"
               />
-            </Parallax>
-            <div className="absolute -bottom-6 -left-6 hidden border border-gold-500/30 bg-cream px-7 py-5 shadow-xl md:block">
-              <div className="text-display text-2xl font-bold italic text-forest-700">Handcrafted</div>
-              <div className="eyebrow mt-1 text-[0.55rem] text-gold-600">Live · Fresh · Every time</div>
+            </div>
+            <div className="absolute -bottom-5 -left-5 hidden border border-gold-500/30 bg-cream px-6 py-4 shadow-xl md:block">
+              <div className="text-display text-xl font-bold italic text-forest-700">Handcrafted</div>
+              <div className="eyebrow mt-1 text-[0.52rem] text-gold-600">Live · Fresh · Every time</div>
             </div>
           </div>
         </Reveal>

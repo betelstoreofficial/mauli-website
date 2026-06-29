@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import type { ReactNode } from 'react'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -8,20 +9,26 @@ export default function PageHero({
   accent,
   blurb,
   image,
+  background,
 }: {
   eyebrow: string
   title: string
   accent?: string
   blurb?: string
-  image: string
+  image?: string
+  background?: ReactNode
 }) {
   return (
     <section className="grain relative flex h-[58svh] min-h-[420px] w-full items-end overflow-hidden bg-forest-950">
-      <div className="absolute inset-0">
-        <img src={image} alt="" className="h-full w-full object-cover" fetchPriority="high" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/40 to-forest-950/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/70 to-transparent" />
-      </div>
+      {background ? (
+        background
+      ) : (
+        <div className="absolute inset-0">
+          <img src={image} alt="" className="h-full w-full object-cover" fetchPriority="high" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/40 to-forest-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-forest-950/70 to-transparent" />
+        </div>
+      )}
 
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 pb-14 md:px-10 md:pb-20">
         <motion.div

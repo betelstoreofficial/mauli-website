@@ -3,15 +3,15 @@ import CountUp from '@/components/CountUp'
 import { BRAND_STATS } from '@/data/site'
 
 const CHAPTERS = [
-  { year: '1990', place: 'Shirdi', text: 'A single counter near the Sai Baba Mandir — fresh, honest paan, blessed by the town that named us.' },
-  { year: '2017', place: 'Pune', text: 'We carried the recipe west and became the city’s most-loved paan — rated No.1 in the “What’s Hot” survey.' },
+  { year: '1990', place: 'Shirdi', text: 'A single counter near the Sai Baba Mandir - fresh, honest paan, blessed by the town that named us.' },
+  { year: '2017', place: 'Pune', text: 'We carried the recipe west and became the city’s most-loved paan - rated No.1 in the “What’s Hot” survey.' },
   { year: 'Today', place: 'India', text: '11+ outlets across Maharashtra & Gujarat, 211+ varieties, and a flagship paan-dessert house in Ahmedabad.' },
 ]
 
 /** Brand meaning + belief + heritage, merged into one continuous panel. */
 export default function HomeStory() {
   return (
-    <section className="bg-forest-rich grain relative overflow-hidden py-28 md:py-36">
+    <section className="bg-forest-rich grain relative overflow-hidden py-24 md:py-32">
       <div className="pointer-events-none absolute -right-16 top-24 opacity-[0.05]">
         <svg width="420" height="420" viewBox="0 0 24 24" fill="none">
           <path d="M4 20C3 11 9 3.5 20 3c.5 7.5-3 16.5-13 16.9C6 19.95 5 20 4 20Z" fill="#fff" />
@@ -23,7 +23,7 @@ export default function HomeStory() {
         <ScrollFade className="text-center">
           <span className="eyebrow gold-text">माऊली</span>
           <p className="text-display mx-auto mt-6 max-w-[24ch] text-[clamp(1.5rem,3.4vw,2.5rem)] font-medium leading-[1.32] text-cream">
-            In Marathi, <span className="gradient-gold italic">Mauli</span> means mother — protector, blessing, the hand
+            In Marathi, <span className="gradient-gold italic">Mauli</span> means mother - protector, blessing, the hand
             that nurtures. It's the spirit we fold into every paan.
           </p>
           <p className="text-display mx-auto mt-10 max-w-[20ch] text-[clamp(1.8rem,4.6vw,3.2rem)] font-bold italic leading-[1.15] text-cream">
@@ -31,7 +31,7 @@ export default function HomeStory() {
           </p>
         </ScrollFade>
 
-        {/* heritage timeline — horizontal, chapters side by side */}
+        {/* heritage timeline - horizontal, chapters side by side */}
         <ScrollFade className="mt-20">
           <div className="relative grid gap-10 sm:grid-cols-3 sm:gap-6">
             {/* connecting line (desktop) */}

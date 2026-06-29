@@ -62,7 +62,7 @@ export default function Explore() {
               <Link
                 to={p.to}
                 data-cursor="grow"
-                className="group flex h-full flex-col overflow-hidden rounded-[3px] border border-ink/10 bg-white shadow-[0_2px_10px_-6px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_60px_-26px_rgba(0,0,0,0.35)]"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-[0_2px_10px_-6px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_60px_-26px_rgba(0,0,0,0.35)]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img

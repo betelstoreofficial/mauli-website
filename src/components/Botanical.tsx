@@ -1,4 +1,4 @@
-/** Hand-drawn-style betel-leaf divider — replaces plain gold lines, adds craft/wellness feel. */
+/** Hand-drawn-style betel-leaf divider - replaces plain gold lines, adds craft/wellness feel. */
 export default function Botanical({ className = '', tone = 'gold' }: { className?: string; tone?: 'gold' | 'cream' }) {
   const c = tone === 'gold' ? '#d8b15a' : 'rgba(251,247,238,0.5)'
   return (

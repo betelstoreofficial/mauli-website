@@ -7,7 +7,7 @@ const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function Shop() {
   return (
-    <section id="shop" className="bg-cream-rich relative overflow-hidden py-24 md:py-36">
+    <section id="shop" className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
@@ -38,7 +38,7 @@ export default function Shop() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-8% 0px' }}
               transition={{ duration: 0.8, ease: EASE, delay: i * 0.08 }}
-              className="group flex flex-col overflow-hidden rounded-[3px] border border-ink/8 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-ink/8 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)]"
             >
               <div className="relative aspect-square overflow-hidden bg-cream-deep">
                 <img
@@ -61,7 +61,7 @@ export default function Shop() {
                   {p.variants.map((v) => (
                     <div
                       key={v.label}
-                      className={`flex items-center justify-between rounded-[2px] px-3 py-1.5 text-[0.72rem] ${
+                      className={`flex items-center justify-between rounded-lg px-3 py-1.5 text-[0.72rem] ${
                         v.note ? 'bg-forest-500/8 text-forest-700' : 'bg-cream-deep/60 text-ink-soft'
                       }`}
                     >

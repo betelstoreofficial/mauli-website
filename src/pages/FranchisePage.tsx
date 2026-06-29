@@ -4,7 +4,7 @@ import Seo from '@/components/Seo'
 import CountUp from '@/components/CountUp'
 import { Reveal, RevealHeading, Parallax } from '@/lib/motion'
 import { CTA, WhatsAppIcon } from '@/components/WhatsApp'
-import { FRANCHISE, BRAND_STATS, SITE, waFranchise, MESSAGES } from '@/data/site'
+import { FRANCHISE, FRANCHISE_MODELS, BRAND_STATS, SITE, waFranchise, MESSAGES } from '@/data/site'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -12,8 +12,8 @@ export default function FranchisePage() {
   return (
     <>
       <Seo
-        title="Franchise — Mauli Family Paan House · Own a 35-year legacy"
-        description="Own a Mauli franchise from ₹3,00,000 — turnkey live paan counter, ROI in 3–5 months, ₹1 lakh+ monthly potential. India's first OG family paan house, since 1990."
+        title="Franchise - Mauli Family Paan House · Own a 35-year legacy"
+        description="Own a Mauli franchise from ₹3,00,000 - turnkey live paan counter, ROI in 3–5 months, ₹1 lakh+ monthly potential. India's first OG family paan house, since 1990."
       />
       <PageHero
         eyebrow="Franchise Opportunity · Since 1990"
@@ -24,7 +24,7 @@ export default function FranchisePage() {
       />
 
       {/* legacy proof */}
-      <section className="bg-forest-emerald relative overflow-hidden py-20 md:py-28">
+      <section className="bg-forest-emerald relative overflow-hidden py-24 md:py-32">
         <div className="mx-auto max-w-[1480px] px-6 md:px-10">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -38,13 +38,13 @@ export default function FranchisePage() {
               <Reveal delay={0.1}>
                 <p className="mt-5 max-w-[48ch] text-[1rem] font-light leading-relaxed text-cream/70">
                   Mauli began in 1990 at Shirdi, near the Sai Baba Mandir, and has grown to 11+ thriving outlets across
-                  Maharashtra & Gujarat — rated Pune's No.1 paan maker. You're not starting from scratch; you're joining
+                  Maharashtra & Gujarat - rated Pune's No.1 paan maker. You're not starting from scratch; you're joining
                   a family.
                 </p>
               </Reveal>
             </div>
             <Reveal y={40}>
-              <Parallax amount={28} className="aspect-[4/3] overflow-hidden rounded-[4px] border border-gold-300/20 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)]">
+              <Parallax amount={28} className="aspect-[4/3] overflow-hidden rounded-2xl border border-gold-300/20 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)]">
                 <img src="/img/catering/logo.png" alt="Mauli paan counter at a celebration" className="h-[110%] w-full object-cover" loading="lazy" decoding="async" />
               </Parallax>
             </Reveal>
@@ -64,8 +64,61 @@ export default function FranchisePage() {
         </div>
       </section>
 
+      {/* two models */}
+      <section className="bg-forest-deep relative overflow-hidden py-24 md:py-32">
+        <div className="mx-auto max-w-[1480px] px-6 md:px-10">
+          <div className="mb-12 text-center">
+            <Reveal><span className="eyebrow gold-text">Two ways to own a Mauli</span></Reveal>
+            <RevealHeading text="Pick the model that fits you." as="h2" className="text-display mx-auto mt-3 max-w-[20ch] text-[clamp(1.8rem,4vw,3.2rem)] font-bold leading-[1.08] text-cream" />
+          </div>
+          <div className="grid gap-5 lg:grid-cols-2">
+            {FRANCHISE_MODELS.map((m, i) => (
+              <motion.div
+                key={m.id}
+                initial={{ opacity: 0, y: 34 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-8% 0px' }}
+                transition={{ duration: 0.8, ease: EASE, delay: i * 0.1 }}
+                className={`flex flex-col overflow-hidden rounded-2xl border ${m.hero ? 'border-gold-300/50 bg-gradient-to-b from-forest-700/50 to-forest-800' : 'border-cream/10 bg-forest-900/40'}`}
+              >
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img src={m.image} alt={m.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 to-transparent" />
+                  <span className={`absolute left-4 top-4 rounded-full px-3 py-1 text-[0.56rem] font-semibold uppercase tracking-wider ${m.hero ? 'bg-gold-300 text-forest-900' : 'bg-forest-950/70 text-gold-100'}`}>{m.tag}</span>
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <h3 className="text-display text-2xl font-bold text-cream">{m.name}</h3>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-display text-3xl font-bold gold-text">{m.invest}</span>
+                    <span className="text-[0.72rem] text-cream/50">investment</span>
+                  </div>
+                  <p className="mt-3 text-[0.86rem] font-light leading-relaxed text-cream/60">{m.blurb}</p>
+                  <ul className="mt-5 flex-1 space-y-2.5">
+                    {m.points.map((p) => (
+                      <li key={p} className="flex gap-2.5 text-[0.8rem] text-cream/70">
+                        <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-gold-300" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={waFranchise(MESSAGES.franchiseModel(m.name))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cursor="grow"
+                    className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full py-3 text-[0.8rem] font-medium tracking-wide transition-all duration-500 ${m.hero ? 'bg-gold-300 text-forest-900 hover:bg-gold-100' : 'border border-gold-300/40 text-gold-100 hover:bg-gold-300/5'}`}
+                  >
+                    Enquire about this model <span>→</span>
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* the numbers */}
-      <section className="bg-cream-rich relative overflow-hidden py-20 md:py-28">
+      <section className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
         <div className="mx-auto max-w-[1480px] px-6 md:px-10">
           <div className="mb-12 text-center">
             <Reveal><span className="eyebrow text-gold-600">The opportunity</span></Reveal>
@@ -83,7 +136,7 @@ export default function FranchisePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-8% 0px' }}
                 transition={{ duration: 0.8, ease: EASE, delay: i * 0.1 }}
-                className="rounded-[4px] border border-forest-500/15 bg-white/70 p-8 text-center shadow-[0_10px_40px_-24px_rgba(0,0,0,0.4)]"
+                className="rounded-2xl border border-forest-500/15 bg-white/70 p-8 text-center shadow-[0_10px_40px_-24px_rgba(0,0,0,0.4)]"
               >
                 <div className="text-display text-5xl font-bold text-forest-600 md:text-6xl">{s.k}</div>
                 <div className="mt-3 text-[0.9rem] font-semibold text-ink">{s.label}</div>
@@ -95,7 +148,7 @@ export default function FranchisePage() {
       </section>
 
       {/* what's included + counter render */}
-      <section className="bg-forest-rich relative overflow-hidden py-20 md:py-28">
+      <section className="bg-forest-rich relative overflow-hidden py-24 md:py-32">
         <div className="mx-auto max-w-[1480px] px-6 md:px-10">
           <div className="mb-12 max-w-[46ch]">
             <Reveal><span className="eyebrow gold-text">The complete package</span></Reveal>
@@ -105,7 +158,7 @@ export default function FranchisePage() {
             />
             <Reveal delay={0.1}>
               <p className="mt-5 text-[0.95rem] font-light leading-relaxed text-cream/70">
-                A compact, fully-movable live paan counter — delivered, installed and stocked. No guesswork, no
+                A compact, fully-movable live paan counter - delivered, installed and stocked. No guesswork, no
                 experience required.
               </p>
             </Reveal>
@@ -113,7 +166,7 @@ export default function FranchisePage() {
 
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
             <Reveal y={40}>
-              <Parallax amount={30} className="h-full min-h-[380px] overflow-hidden rounded-[4px] border border-gold-300/20 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)]">
+              <Parallax amount={30} className="h-full min-h-[380px] overflow-hidden rounded-2xl border border-gold-300/20 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)]">
                 <img src="/img/franchise/counter-open.png" alt="Mauli franchise live paan counter setup" className="h-[110%] w-full object-cover" loading="lazy" decoding="async" />
               </Parallax>
             </Reveal>
@@ -126,7 +179,7 @@ export default function FranchisePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-6% 0px' }}
                   transition={{ duration: 0.7, ease: EASE, delay: (i % 2) * 0.06 }}
-                  className="rounded-[4px] border border-cream/10 bg-forest-900/40 p-5"
+                  className="rounded-2xl border border-cream/10 bg-forest-900/40 p-5"
                 >
                   <div className="flex items-start gap-3">
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gold-300/15 text-[0.7rem] font-bold text-gold-100">
@@ -145,7 +198,7 @@ export default function FranchisePage() {
       </section>
 
       {/* why choose */}
-      <section className="bg-cream-rich relative overflow-hidden py-20 md:py-28">
+      <section className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
         <div className="mx-auto max-w-[1480px] px-6 md:px-10">
           <div className="mb-12 max-w-[40ch]">
             <Reveal><span className="eyebrow text-gold-600">Why Mauli</span></Reveal>
@@ -157,7 +210,7 @@ export default function FranchisePage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {FRANCHISE.why.map((w, i) => (
               <Reveal key={w.title} delay={(i % 3) * 0.08}>
-                <div className="h-full rounded-[4px] border border-ink/10 bg-white/70 p-7">
+                <div className="h-full rounded-2xl border border-ink/10 bg-white/70 p-7">
                   <div className="text-display text-2xl font-bold text-forest-600">0{i + 1}</div>
                   <h3 className="text-display mt-3 text-xl font-bold text-ink">{w.title}</h3>
                   <p className="mt-2 text-[0.84rem] leading-relaxed text-ink-soft">{w.body}</p>

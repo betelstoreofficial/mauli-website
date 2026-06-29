@@ -9,7 +9,7 @@ function LeafDot() {
   )
 }
 
-/** Gentle trust marquee — JS-driven so it always moves (CSS animations are paused under
+/** Gentle trust marquee - JS-driven so it always moves (CSS animations are paused under
  *  reduced-motion in some browsers). Pauses on hover. */
 export default function Marquee() {
   const track = useRef<HTMLDivElement>(null)

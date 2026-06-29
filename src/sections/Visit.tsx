@@ -7,7 +7,7 @@ export default function Visit({ image = '/img/franchise/visit.jpg' }: { image?: 
   return (
     <section id="visit" className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
       <div className="mx-auto grid max-w-[1480px] items-center gap-12 px-6 md:px-10 lg:grid-cols-2 lg:gap-16">
-        {/* text — left */}
+        {/* text - left */}
         <div>
           <Reveal>
             <div className="mb-5 flex items-center gap-3">
@@ -21,7 +21,7 @@ export default function Visit({ image = '/img/franchise/visit.jpg' }: { image?: 
           />
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-[46ch] text-[1rem] font-light leading-relaxed text-ink-soft">
-              Watch your paan made to order — Fire Paan theatre, gulkand shakes, the full live experience. Walk in, or
+              Watch your paan made to order - Fire Paan theatre, gulkand shakes, the full live experience. Walk in, or
               order ahead for local delivery & pickup across Ahmedabad.
             </p>
           </Reveal>
@@ -59,12 +59,12 @@ export default function Visit({ image = '/img/franchise/visit.jpg' }: { image?: 
           </Reveal>
         </div>
 
-        {/* image — right */}
+        {/* image - right */}
         <Reveal y={40}>
-          <Parallax amount={30} className="aspect-[4/5] overflow-hidden rounded-[3px] border border-gold-500/15 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.5)]">
+          <Parallax amount={30} className="aspect-[4/5] overflow-hidden rounded-2xl border border-gold-500/15 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.5)]">
             <img
               src={image}
-              alt="Mauli Family Paan House — fresh paan at the counter"
+              alt="Mauli Family Paan House - fresh paan at the counter"
               className="h-[110%] w-full object-cover"
               loading="lazy"
               decoding="async"

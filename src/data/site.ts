@@ -11,10 +11,12 @@ export const SITE = {
   since: 1990,
   phone: '+91 78018 79290',
   phoneRaw: '917801879290',
-  franchisePhone: '+91 91127 28528',
-  franchisePhoneRaw: '919112728528',
+  franchisePhone: '+91 78018 79290',
+  franchisePhoneRaw: '917801879290',
   instagram: 'https://instagram.com/mauli_ahmedabad',
   instagramHandle: '@mauli_ahmedabad',
+  swiggy: 'https://www.swiggy.com/direct/brand/133723?source=swiggy-direct&subSource=generic',
+  zomato: 'https://link.zomato.com/xqzv/rshare?id=1211732553056369e',
   address: 'Near Taj Skyline, inside Frizbee Food Park, opp Tea Post, Bodakdev, SBR Road, Ahmedabad, Gujarat 380059',
   shortAddress: 'Frizbee Food Park, SBR Road, Ahmedabad',
   scanMenuNote: 'Live made-to-order paan at our counter',
@@ -80,7 +82,7 @@ export const BOXES: Box[] = [
     price: 899,
     perPaan: 45,
     contents: '2 Sweet · 2 Chutney · 5 Crunchy Flavour · 2 Dry Fruit · 3 Chocolate · 2 Lotus Biscoff · 2 Nutella · 2 Kunafa',
-    image: '/img/paan/nutella.webp',
+    image: '/img/boxes/boxbanner.png',
   },
 ]
 
@@ -161,7 +163,7 @@ export const CATERING: CateringPackage[] = [
     id: 'classic',
     name: 'Mauli Classic',
     forWhom: 'Corporate · Birthdays · Gatherings',
-    price: 70,
+    price: 69,
     unit: 'per person',
     blurb: 'A refined introduction to Mauli - our most-loved traditional creations, presented with elegance & consistency.',
     inclusions: ['Sweet / Chutney / Flavour / Crunchy filled paan', '2 paan per guest', 'One decorated table setup', '1 trained staff'],
@@ -170,7 +172,7 @@ export const CATERING: CateringPackage[] = [
     id: 'celebration',
     name: 'Mauli Celebration',
     forWhom: 'Weddings · Receptions',
-    price: 100,
+    price: 99,
     unit: 'per guest',
     blurb: 'Our signature wedding experience - timeless favourites blended with modern indulgences, crafted to delight every guest.',
     inclusions: ['All Signature + Chocolate / Dry Fruit paan', 'Digestive shots', '3 paan per guest', 'Two decorated tables · Live service', '2 trained staff'],
@@ -180,7 +182,7 @@ export const CATERING: CateringPackage[] = [
     id: 'grand',
     name: 'Mauli Grand',
     forWhom: 'Luxury & Destination Weddings · VIP',
-    price: 150,
+    price: 199,
     unit: 'per guest',
     blurb: 'The complete Mauli hospitality experience - presentation, variety & guest engagement take centre stage.',
     inclusions: ['All desserts + exclusive paans', 'Gulkand Shake & digestive shots', '5 items per guest', '2–3 decorated tables · Live + floating service', '3–4 trained staff'],
@@ -246,10 +248,10 @@ export const TRUST_BADGES = [
 export const TESTIMONIALS = [
   { quote: 'The live paan counter was the talk of our wedding. Guests still message me about it.', author: 'Riya & Aman', role: 'Wedding · Ahmedabad' },
   { quote: 'Finally a paan that feels indulgent and healthy. The gulkand shake is unreal.', author: 'Neha S.', role: 'Regular · Frizbee' },
-  { quote: 'Rated No.1 in the “What’s Hot in Pune” survey — and it absolutely earns it.', author: "What's Hot Pune", role: 'Featured · 4.7★ Google' },
+  { quote: 'Rated No.1 in the “What’s Hot in Pune” survey - and it absolutely earns it.', author: "What's Hot Pune", role: 'Featured · 4.7★ Google' },
 ]
 
-// ---- Full paan menu (catalog — no pricing, concise) ----
+// ---- Full paan menu (catalog - no pricing, concise) ----
 export interface PaanCategory {
   title: string
   items: { name: string; image: string }[]
@@ -262,8 +264,7 @@ export const PAAN_MENU: PaanCategory[] = [
       { name: 'Royal Maghai', image: '/img/paan/maghai.webp' },
       { name: 'Rampyari Royale', image: '/img/paan/rampyari.webp' },
       { name: 'Royal Dry Fruit', image: '/img/paan/dryfruit.webp' },
-      { name: 'Gulkand Classic', image: '/img/paan/gulkand.webp' },
-      { name: 'Mauli Classic', image: '/img/paan/meetha-gulab.webp' },
+      { name: 'Flavour Paan', image: '/img/paan/flavor.webp' },
     ],
   },
   {
@@ -280,7 +281,8 @@ export const PAAN_MENU: PaanCategory[] = [
   {
     title: 'Classics & Digestive',
     items: [
-      { name: 'Flavour Paan', image: '/img/paan/flavor.webp' },
+      { name: 'Gulkand Classic', image: '/img/paan/gulkand.webp' },
+      { name: 'Mauli Classic', image: '/img/paan/meetha-gulab.webp' },
       { name: 'Chutney Burst', image: '/img/paan/chutney.webp' },
       { name: 'Jelly Jewel', image: '/img/paan/jelly.webp' },
     ],
@@ -315,8 +317,8 @@ export const FRANCHISE = {
   monthly: '₹1 lakh+',
   headline: 'Own a piece of a 35-year legacy',
   stats: [
-    { k: '₹3L', label: 'One-time investment', note: 'complete turnkey package' },
-    { k: '3–5', label: 'Months to ROI', note: 'proven across 11+ outlets' },
+    { k: '₹5L', label: 'One-time investment', note: 'complete turnkey package' },
+    { k: '5–7', label: 'Months to ROI', note: 'proven across 11+ outlets' },
     { k: '₹1L+', label: 'Monthly earning', note: 'potential per counter' },
   ],
   includes: [
@@ -340,6 +342,56 @@ export const FRANCHISE = {
   closing: 'Limited franchise slots - paan is the only dessert that is affordable for everyone, loved by all ages, and promotes health.',
 }
 
+// ---- Two franchise models ----
+export const FRANCHISE_MODELS = [
+  {
+    id: 'counter',
+    name: 'Express Counter',
+    invest: '₹5,00,000',
+    tag: 'Most popular',
+    blurb: 'A compact, fully-movable live paan counter - perfect for hotels, food parks, high streets and banquets.',
+    points: ['5×4×2 ft SS-304 counter', 'Turnkey: equipment + raw material', 'ROI in 5–7 months', '₹1 lakh+ monthly potential'],
+    image: '/img/franchise/counter-open.png',
+    hero: false,
+  },
+  {
+    id: 'experience',
+    name: 'Build-Your-Own Experience Store',
+    invest: '₹10–12 lakh',
+    tag: 'Flagship model',
+    blurb: 'A full retail paan-dessert destination - the Ahmedabad flagship model, where guests craft their own paan live.',
+    points: ['Premium fixed storefront & interiors', 'Make-Your-Own-Paan live bar', 'Full dessert & paan-drinks menu', 'Flagship branding & experience design'],
+    image: '/img/franchise/visit.jpg',
+    hero: true,
+  },
+]
+
+// ---- Franchise journey (animated, Visit page) ----
+export const FRANCHISE_JOURNEY = [
+  { year: '1990', city: 'Shirdi', region: 'Where it began', note: 'A single counter near the Sai Baba Mandir.' },
+  { year: '2017', city: 'Pune', region: '11 outlets', note: 'Rated No.1 in the “What’s Hot, Pune” survey.' },
+  { year: '2023', city: 'Shrigonda', region: 'Beyond the city', note: 'The recipe travels across Maharashtra.' },
+  { year: 'Today', city: 'Ahmedabad', region: 'The Flagship', note: 'Frizbee Food Park - our first Build-Your-Own Paan Experience Store.', flagship: true, image: '/img/franchise/visit.jpg' },
+]
+
+// All Pune outlets (the 11) + beyond
+export const OUTLETS = {
+  pune: [
+    'Alka Talkies Chowk, Sadashiv Peth',
+    'R.B. Kumthekar Road',
+    'Fergusson College Gate 2, FC Road',
+    'Bharat Natyamandir, Perugate',
+    'Hotel Shauryawada',
+    'Hotel Sandeep, Magarpatta',
+    'Hotel Shivraj Dhaba, Wagholi',
+    "Hotel Surve's, Viman Nagar",
+    'Thermax Chowk, PCMC',
+    'Hotel Siddhivinayak, Tilak Road',
+    'Hotel Sainath, Kharadi',
+  ],
+  beyond: ['Shrigonda, Ahilyanagar', 'Frizbee Food Park, Ahmedabad'],
+}
+
 // ---- WhatsApp message templates ----
 export const MESSAGES = {
   boxGeneric: "Hi Mauli, I'd like to order an assorted paan box.\n\nBox:\nFor (date / occasion):\nDelivery or pickup (Ahmedabad):\nPhone:",
@@ -351,6 +403,8 @@ export const MESSAGES = {
     `Hi Mauli, I'm interested in paan catering${pkg ? ` - ${pkg} package` : ''}.\n\nEvent type:\nDate:\nApprox guests:\nVenue / city:`,
   visit: "Hi Mauli, I'd like to order fresh paan (Ahmedabad).\n\nMy items:\nDelivery or pickup:\nPhone:",
   franchise: "Hi Mauli, I'm interested in owning a Mauli franchise.\n\nMy name:\nCity:\nDo you have a location in mind?:\nPhone:",
+  franchiseModel: (model: string) =>
+    `Hi Mauli, I'm interested in the ${model} franchise model.\n\nMy name:\nCity:\nDo you have a location in mind?:\nPhone:`,
 } as const
 
 export function waFranchise(message: string): string {

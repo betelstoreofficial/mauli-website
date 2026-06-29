@@ -14,12 +14,12 @@ const PROMISE = [
 export default function ShopPage() {
   return (
     <>
-      <Seo title="Shop — Mauli Kesar Gulkand, Ayu Digest & Premixes (Pan-India)" description="Buy Mauli Kesar Rose Gulkand, Ayu Digest (16 Ayurvedic herbs) and signature premixes — packed fresh, shipped anywhere in India." />
+      <Seo title="Shop - Mauli Kesar Gulkand, Ayu Digest & Premixes (Pan-India)" description="Buy Mauli Kesar Rose Gulkand, Ayu Digest (16 Ayurvedic herbs) and signature premixes - packed fresh, shipped anywhere in India." />
       <PageHero
         eyebrow="Ships Pan-India"
         title="The Mauli"
         accent="Shop"
-        blurb="The same ingredients folded into every Mauli paan — Kesar Gulkand, Ayu Digest and our signature premixes — packed fresh and delivered anywhere in India."
+        blurb="The same ingredients folded into every Mauli paan - Kesar Gulkand, Ayu Digest and our signature premixes - packed fresh and delivered anywhere in India."
         image="/img/products/shop.png"
       />
 
@@ -44,10 +44,10 @@ export default function ShopPage() {
         tone="dark"
         bg="bg-forest-rich"
         items={[
-          { q: 'How long do the products last?', a: 'Kesar Gulkand keeps ~3 months, Ayu Digest ~2 months, and the premixes several months when sealed and stored cool & dry. Each pack is dated.' },
-          { q: 'Where do you ship and how long does it take?', a: 'Anywhere in India via Delhivery or DTDC — typically 2–6 days depending on your pincode. Tracking is shared after dispatch.' },
+          { q: 'How long do the products last?', a: 'Kesar Gulkand keeps ~3 months, Ayu Digest ~12 months, and the premixes several months when sealed and stored cool & dry. Each pack is dated.' },
+          { q: 'Where do you ship and how long does it take?', a: 'Anywhere in India via Delhivery or DTDC - typically 2–6 days depending on your pincode. Tracking is shared after dispatch.' },
           { q: 'How are shipping charges calculated?', a: 'At actuals by weight and location (roughly ₹60–180). We confirm the exact amount on WhatsApp before dispatch.' },
-          { q: 'Can I gift these or buy in bulk?', a: 'Yes — the 250g gift-ready premixes and larger Gulkand jars are popular for gifting. Message us for bulk or corporate orders.' },
+          { q: 'Can I gift these or buy in bulk?', a: 'Yes - the 250g gift-ready premixes and larger Gulkand jars are popular for gifting. Message us for bulk or corporate orders.' },
         ]}
       />
     </>

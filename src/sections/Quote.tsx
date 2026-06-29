@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function Quote() {
   return (
-    <section className="relative overflow-hidden bg-forest-950 py-20 md:py-28">
+    <section className="relative overflow-hidden bg-forest-950 py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 opacity-[0.07]">
         <div className="text-display absolute -left-6 -top-10 text-[18rem] leading-none text-gold-300">“</div>
       </div>

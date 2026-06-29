@@ -6,7 +6,7 @@ import Botanical from '@/components/Botanical'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/** The wellness ritual — Ayurvedic ingredient board. Hover/tap a herb to reveal its benefit. */
+/** The wellness ritual - Ayurvedic ingredient board. Hover/tap a herb to reveal its benefit. */
 export default function Wellness() {
   const [active, setActive] = useState(0)
 
@@ -23,7 +23,7 @@ export default function Wellness() {
         />
         <Reveal delay={0.1}>
           <p className="mx-auto mt-5 max-w-[54ch] text-[0.96rem] font-light leading-relaxed text-cream/65">
-            Sixteen Ayurvedic herbs and eighteen natural ingredients, folded into every paan — to cool, calm and aid
+            Sixteen Ayurvedic herbs and eighteen natural ingredients, folded into every paan - to cool, calm and aid
             digestion. Sweet like a treat, kind like medicine.
           </p>
         </Reveal>
@@ -46,7 +46,7 @@ export default function Wellness() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-6% 0px' }}
               transition={{ duration: 0.6, ease: EASE, delay: (i % 4) * 0.06 }}
-              className={`group relative flex aspect-square flex-col items-center justify-center gap-2 rounded-[4px] border p-4 text-center transition-all duration-500 ${
+              className={`group relative flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl border p-4 text-center transition-all duration-500 ${
                 active === i
                   ? 'border-gold-300/60 bg-forest-700/60'
                   : 'border-cream/10 bg-forest-800/40 hover:border-gold-300/30'
@@ -69,7 +69,7 @@ export default function Wellness() {
           >
             <span className="text-xl">{INGREDIENTS[active].emoji}</span>
             <span className="text-[0.88rem] text-cream/80">
-              <span className="font-semibold text-gold-100">{INGREDIENTS[active].name}</span> — {INGREDIENTS[active].benefit}
+              <span className="font-semibold text-gold-100">{INGREDIENTS[active].name}</span> - {INGREDIENTS[active].benefit}
             </span>
           </motion.div>
         </Reveal>

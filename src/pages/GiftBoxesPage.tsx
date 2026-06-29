@@ -10,12 +10,12 @@ const OCCASIONS = ['Diwali & Festivals', 'Weddings', 'Corporate Gifting', 'House
 export default function GiftBoxesPage() {
   return (
     <>
-      <Seo title="Gift Boxes — Mauli Family Paan House" description="Curated assorted paan gift boxes, 4 to 20 pieces, from ₹199 — for festivals, parties and corporate gifting across Ahmedabad. Hand-made fresh." />
+      <Seo title="Gift Boxes - Mauli Family Paan House" description="Curated assorted paan gift boxes, 4 to 20 pieces, from ₹199 - for festivals, parties and corporate gifting across Ahmedabad. Hand-made fresh." />
       <PageHero
         eyebrow="Gift & Share"
         title="Assorted"
         accent="Gift Boxes"
-        blurb="Curated boxes of fresh-folded paan — from a 4-piece taster to a 20-piece centrepiece — for festivals, parties and corporate gifting across Ahmedabad."
+        blurb="Curated boxes of fresh-folded paan - from a 4-piece taster to a 20-piece centrepiece - for festivals, parties and corporate gifting across Ahmedabad."
         image="/img/catering/boxbanner.png"
       />
 
@@ -39,10 +39,10 @@ export default function GiftBoxesPage() {
         tone="light"
         bg="bg-cream-rich"
         steps={[
-          { title: 'Pick a box', text: 'Choose Discovery, Family, Signature or Grand — or ask us for a custom mix.' },
+          { title: 'Pick a box', text: 'Choose Discovery, Family, Signature or Grand - or ask us for a custom mix.' },
           { title: 'WhatsApp us', text: 'Tap any box to message us your date, quantity and delivery area in Ahmedabad.' },
           { title: 'Made fresh', text: 'We hand-fold every paan the same day, beautifully boxed and ready to gift.' },
-          { title: 'Delivered', text: 'Local delivery or counter pickup across Ahmedabad — fresh and on time.' },
+          { title: 'Delivered', text: 'Local delivery or counter pickup across Ahmedabad - fresh and on time.' },
         ]}
       />
 
@@ -51,7 +51,7 @@ export default function GiftBoxesPage() {
         tone="dark"
         bg="bg-forest-rich"
         items={[
-          { q: 'Can I customise the paan inside a box?', a: 'Yes — tell us your preferences on WhatsApp (more chocolate, no chutney, extra dry-fruit) and we’ll tailor the mix.' },
+          { q: 'Can I customise the paan inside a box?', a: 'Yes - tell us your preferences on WhatsApp (more chocolate, no chutney, extra dry-fruit) and we’ll tailor the mix.' },
           { q: 'How far in advance should I order?', a: 'Same-day is often possible, but for large festival or corporate orders we recommend 24–48 hours notice.' },
           { q: 'Do you deliver outside Ahmedabad?', a: 'Fresh paan boxes are local to Ahmedabad for now (delivery & pickup). For Pan-India, see our shippable products in the Shop.' },
           { q: 'Is everything tobacco-free?', a: 'Always. Every Mauli paan is 100% tobacco-free, supari-free and made with 16 Ayurvedic herbs.' },
