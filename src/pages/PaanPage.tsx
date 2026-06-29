@@ -3,9 +3,8 @@ import PageHero from '@/components/PageHero'
 import Seo from '@/components/Seo'
 import Story from '@/sections/Story'
 import PaanMenu from '@/sections/PaanMenu'
-import Botanical from '@/components/Botanical'
 import { Reveal, RevealHeading } from '@/lib/motion'
-import { wa, MESSAGES } from '@/data/site'
+import { SITE, wa, MESSAGES } from '@/data/site'
 import { CTA, WhatsAppIcon } from '@/components/WhatsApp'
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -27,21 +26,43 @@ export default function PaanPage() {
         title="The"
         accent="Paan"
         blurb="From classic meetha gulab to desserts - every Mauli paan is folded to order, rooted in Ayurveda, finished like a jewel."
-        image="/img/catering/hero.png"
+        image="/img/catering/hero.jpeg"
       />
       <Story />
 
-      {/* craft your own - animated */}
-      <section className="bg-forest-rich grain relative overflow-hidden py-24 md:py-32">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-10">
-          <div className="mb-4 text-center">
-            <Reveal><span className="eyebrow gold-text">Make it yours · ₹149</span></Reveal>
-            <RevealHeading text="Craft your own paan." as="h2" className="text-display mx-auto mt-3 max-w-[18ch] text-[clamp(1.9rem,4.4vw,3.3rem)] font-bold leading-[1.08] text-cream" />
+      {/* build your own paan — the experience (video) */}
+      <section className="bg-forest-emerald grain relative overflow-hidden py-24 md:py-32">
+        <div className="pointer-events-none absolute -right-40 top-10 h-[420px] w-[420px] rounded-full bg-gold-400/8 blur-[130px]" />
+        <div className="relative mx-auto max-w-[1200px] px-6 md:px-10">
+          <div className="mx-auto mb-12 max-w-[40ch] text-center">
+            <Reveal><span className="eyebrow gold-text">The Experience · Make it yours · ₹149</span></Reveal>
+            <RevealHeading text="Build your own paan, live." as="h2" className="text-display mx-auto mt-3 max-w-[18ch] text-[clamp(1.9rem,4.4vw,3.3rem)] font-bold leading-[1.08] text-cream" />
+            <Reveal delay={0.1}>
+              <p className="mt-5 text-[0.98rem] font-light leading-relaxed text-cream/65">
+                At our Ahmedabad flagship — India's first <span className="text-gold-100">Build-Your-Own Paan Experience</span> — you walk the counter and compose your own: pick the leaf, the chutney, the filling, a fruit crush and the finishing touches, all rolled fresh in front of you.
+              </p>
+            </Reveal>
           </div>
-          <Reveal delay={0.1}><Botanical className="mb-12" /></Reveal>
 
-          <div className="relative">
-            {/* connecting line (desktop) */}
+          {/* video */}
+          <Reveal y={40}>
+            <div className="relative overflow-hidden rounded-2xl border border-gold-300/20 shadow-[0_40px_90px_-45px_rgba(0,0,0,0.7)]">
+              <video
+                className="aspect-video w-full object-cover"
+                poster="/img/franchise/visit.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+              >
+                <source src="/video/build-your-own.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </Reveal>
+
+          {/* steps */}
+          <div className="relative mt-14">
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -57,7 +78,7 @@ export default function PaanPage() {
                   initial={{ opacity: 0, y: 26 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-6% 0px' }}
-                  transition={{ duration: 0.6, ease: EASE, delay: i * 0.12 }}
+                  transition={{ duration: 0.6, ease: EASE, delay: i * 0.1 }}
                   className="group relative flex flex-col items-center text-center"
                 >
                   <div className="text-display flex h-[72px] w-[72px] items-center justify-center rounded-full border border-gold-300/30 bg-forest-900/60 text-3xl font-bold gold-text transition-all duration-500 group-hover:border-gold-300/70 group-hover:bg-forest-800">
@@ -71,30 +92,10 @@ export default function PaanPage() {
           </div>
 
           <Reveal delay={0.1}>
-            <p className="mt-12 text-center text-[0.82rem] italic text-cream/55">
-              Choose any one - chutney · flavour · topping. Crafted live, in front of you.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <PaanMenu />
-
-      <section className="bg-forest-deep relative overflow-hidden py-24 md:py-32">
-        <div className="mx-auto max-w-[900px] px-6 text-center md:px-10">
-          <Reveal><span className="eyebrow gold-text">Ready when you are</span></Reveal>
-          <Reveal delay={0.05}>
-            <h2 className="text-display mx-auto mt-3 max-w-[20ch] text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] text-cream">
-              Come taste it, fresh at the counter.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="mx-auto mt-5 max-w-[52ch] text-[0.95rem] font-light leading-relaxed text-cream/65">
-              Walk in to Frizbee Food Park, or order ahead on WhatsApp. Paans start at ₹60.
-            </p>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <div className="mt-14 flex flex-col items-center gap-4 text-center">
+              <p className="text-[0.84rem] text-cream/55">
+                Visit us at <span className="text-cream">{SITE.shortAddress}</span> — or order ahead.
+              </p>
               <CTA href={wa(MESSAGES.visit)} variant="wa" icon={<WhatsAppIcon className="h-4 w-4" />}>
                 Order on WhatsApp
               </CTA>
@@ -102,6 +103,8 @@ export default function PaanPage() {
           </Reveal>
         </div>
       </section>
+
+      <PaanMenu />
     </>
   )
 }

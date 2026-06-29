@@ -175,7 +175,7 @@ export const CATERING: CateringPackage[] = [
     price: 99,
     unit: 'per guest',
     blurb: 'Our signature wedding experience - timeless favourites blended with modern indulgences, crafted to delight every guest.',
-    inclusions: ['All Signature + Chocolate / Dry Fruit paan', 'Digestive shots', '3 paan per guest', 'Two decorated tables · Live service', '2 trained staff'],
+    inclusions: ['All Classics + Chocolate / Dry Fruit paan', 'Digestive shots', '3 paan per guest', 'Two decorated tables · Live service', '2 trained staff'],
     hero: true,
   },
   {
@@ -185,7 +185,7 @@ export const CATERING: CateringPackage[] = [
     price: 199,
     unit: 'per guest',
     blurb: 'The complete Mauli hospitality experience - presentation, variety & guest engagement take centre stage.',
-    inclusions: ['All desserts + exclusive paans', 'Gulkand Shake & digestive shots', '5 items per guest', '2–3 decorated tables · Live + floating service', '3–4 trained staff'],
+    inclusions: ['All desserts + Fire paan experience', 'Digestive shots', '5 items per guest', '2 decorated tables + 1 floating service', '3 trained staff'],
   },
 ]
 
@@ -313,12 +313,12 @@ export const PAAN_MENU: PaanCategory[] = [
 // ---- Franchise ----
 export const FRANCHISE = {
   investment: '₹3,00,000',
-  roi: '3–5 months',
+  roi: '3-5 months',
   monthly: '₹1 lakh+',
   headline: 'Own a piece of a 35-year legacy',
   stats: [
     { k: '₹5L', label: 'One-time investment', note: 'complete turnkey package' },
-    { k: '5–7', label: 'Months to ROI', note: 'proven across 11+ outlets' },
+    { k: '5-7', label: 'Months to ROI', note: 'proven across 11+ outlets' },
     { k: '₹1L+', label: 'Monthly earning', note: 'potential per counter' },
   ],
   includes: [
@@ -333,7 +333,7 @@ export const FRANCHISE = {
   ],
   why: [
     { title: 'A trusted, proven name', body: "India's first OG family paan house - rated Pune's No.1 paan maker with a 4.7★ Google reputation." },
-    { title: 'Low cost, fast payback', body: 'A single ₹3 lakh investment, with most franchisees reaching ROI within 3–5 months.' },
+    { title: 'Low cost, fast payback', body: 'A single ₹3 lakh investment, with most franchisees reaching ROI within 3-5 months.' },
     { title: 'Compact & movable', body: 'A 5-ft live counter fits almost anywhere - hotels, food parks, banquets, high streets.' },
     { title: 'Loved by everyone', body: 'Paan is the one dessert that is affordable, ageless and healthy - the perfect franchise product.' },
     { title: 'Health & culture forward', body: '100% tobacco-free, 16 Ayurvedic herbs & 34 ingredients - no mouth redness, no spitting.' },
@@ -350,14 +350,14 @@ export const FRANCHISE_MODELS = [
     invest: '₹5,00,000',
     tag: 'Most popular',
     blurb: 'A compact, fully-movable live paan counter - perfect for hotels, food parks, high streets and banquets.',
-    points: ['5×4×2 ft SS-304 counter', 'Turnkey: equipment + raw material', 'ROI in 5–7 months', '₹1 lakh+ monthly potential'],
+    points: ['5×4×2 ft SS-304 counter', 'Turnkey: equipment + raw material', 'ROI in 5-7 months', '₹1 lakh+ monthly potential'],
     image: '/img/franchise/counter-open.png',
     hero: false,
   },
   {
     id: 'experience',
     name: 'Build-Your-Own Experience Store',
-    invest: '₹10–12 lakh',
+    invest: '₹10-12 lakh',
     tag: 'Flagship model',
     blurb: 'A full retail paan-dessert destination - the Ahmedabad flagship model, where guests craft their own paan live.',
     points: ['Premium fixed storefront & interiors', 'Make-Your-Own-Paan live bar', 'Full dessert & paan-drinks menu', 'Flagship branding & experience design'],

@@ -15,7 +15,7 @@ const DRIFT = [
   { x: 12, y: 64, s: 50, d: 9, delay: 1.1, o: 0.13, r: 12 },
 ]
 
-/** Full-canvas cinematic hero — paan reimagined as a healthy dessert. */
+/** Full-canvas cinematic hero - paan reimagined as a healthy dessert. */
 export default function HeroCanvas() {
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
@@ -56,10 +56,10 @@ export default function HeroCanvas() {
       {/* floating paan image (parallax) */}
       <motion.div
         style={{ y: paanY, scale: paanScale }}
-        className="pointer-events-none absolute right-[-8%] top-1/2 hidden h-[68vh] w-[46vw] -translate-y-1/2 lg:block"
+        className="pointer-events-none absolute right-[1%] top-1/2 hidden h-[68vh] w-[46vw] -translate-y-1/2 lg:block"
       >
         <motion.img
-          src="/img/paan/rampyari.webp"
+          src="/img/products/shop.png"
           alt=""
           className="h-full w-full rounded-full object-cover opacity-90 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)]"
           animate={{ y: [0, -16, 0] }}
@@ -102,7 +102,7 @@ export default function HeroCanvas() {
               animate={{ y: 0 }}
               transition={{ duration: 1.05, ease: EASE, delay: 0.72 }}
             >
-              dessert.
+              dessert
             </motion.span>
           </span>
         </h1>
@@ -113,7 +113,7 @@ export default function HeroCanvas() {
           transition={{ duration: 1, ease: EASE, delay: 0.95 }}
           className="mt-7 max-w-[44ch] text-[1.05rem] font-light leading-relaxed text-cream/75"
         >
-          Sixteen Ayurvedic herbs, zero tobacco — the guilt-free way to close every meal. Handcrafted fresh, the way
+          Sixteen Ayurvedic herbs, zero tobacco - the guilt-free way to close every meal. Handcrafted fresh, the way
           Mauli has since 1990.
         </motion.p>
 

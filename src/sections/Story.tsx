@@ -9,22 +9,22 @@ const PILLARS = [
 
 export default function Story() {
   return (
-    <section id="craft" className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
+    <section id="craft" className="bg-forest-rich grain relative overflow-hidden py-24 md:py-32">
       <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
         {/* text */}
         <div>
           <Reveal>
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-gold-500/60" />
-              <span className="eyebrow text-gold-600">The Craft</span>
+              <span className="h-px w-10 bg-gold-300/70" />
+              <span className="eyebrow gold-text">The Craft</span>
             </div>
           </Reveal>
           <RevealHeading
-            text="Not a paan counter. A house of craft."
-            className="text-display max-w-[14ch] text-[clamp(2rem,4.5vw,3.4rem)] font-bold leading-[1.05] text-ink"
+            text="Not a paan ka galla. A house of craft."
+            className="text-display max-w-[14ch] text-[clamp(2rem,4.5vw,3.4rem)] font-bold leading-[1.05] text-cream"
           />
           <Reveal delay={0.1}>
-            <p className="mt-7 max-w-[52ch] text-[1.02rem] font-light leading-relaxed text-ink-soft">
+            <p className="mt-7 max-w-[52ch] text-[1.02rem] font-light leading-relaxed text-cream/70">
               Every Mauli paan is folded to order, in front of you - a quiet ritual of leaf, gulkand, dry fruit and silver
               varakh. Rooted in Ayurveda, made for wellness, finished like a jewel. It's the same paan that began in 1990,
               now crafted for India's finest weddings, gifts and celebrations.
@@ -34,10 +34,10 @@ export default function Story() {
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 lg:grid-cols-2">
             {PILLARS.map((p, i) => (
               <Reveal key={p.label} delay={i * 0.08}>
-                <div className="border-t border-gold-500/25 pt-4">
-                  <div className="text-display text-4xl font-bold text-forest-700">{p.k}</div>
-                  <div className="mt-1 text-[0.82rem] font-medium text-ink">{p.label}</div>
-                  <div className="text-[0.72rem] text-muted">{p.note}</div>
+                <div className="border-t border-cream/15 pt-4">
+                  <div className="text-display text-4xl font-bold gold-text">{p.k}</div>
+                  <div className="mt-1 text-[0.82rem] font-medium text-cream">{p.label}</div>
+                  <div className="text-[0.72rem] text-cream/45">{p.note}</div>
                 </div>
               </Reveal>
             ))}

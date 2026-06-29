@@ -108,7 +108,7 @@ export default function Catering({ showBanner = true }: { showBanner?: boolean }
         <Reveal>
           <div className="mt-14 flex flex-col items-center gap-6 rounded-2xl border border-gold-300/20 bg-gradient-to-r from-forest-800/60 to-forest-700/40 px-8 py-10 text-center">
             <p className="text-display max-w-[24ch] text-2xl font-bold italic text-cream md:text-3xl">
-              You bring the vision. We bring the hospitality.
+              You bring the vision <br /><br /> We bring the hospitality
             </p>
             <p className="text-[0.8rem] text-cream/50">
               Minimum event value ₹{CATERING_MIN.toLocaleString('en-IN')} · Volume pricing for large events · Bespoke experiences available

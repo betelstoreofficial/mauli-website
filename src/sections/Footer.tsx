@@ -3,11 +3,9 @@ import { SITE, wa, MESSAGES } from '@/data/site'
 
 const LINKS = [
   { label: 'The Paan', to: '/the-paan' },
-  { label: 'Gift Boxes', to: '/gift-boxes' },
-  { label: 'Shop', to: '/shop' },
+  { label: 'Gifts & Shop', to: '/shop' },
   { label: 'Catering', to: '/catering' },
   { label: 'Franchise', to: '/franchise' },
-  { label: 'Visit', to: '/visit' },
 ]
 
 export default function Footer() {

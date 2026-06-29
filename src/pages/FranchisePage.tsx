@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import PageHero from '@/components/PageHero'
 import Seo from '@/components/Seo'
-import CountUp from '@/components/CountUp'
+import FranchiseJourney from '@/sections/FranchiseJourney'
 import { Reveal, RevealHeading, Parallax } from '@/lib/motion'
 import { CTA, WhatsAppIcon } from '@/components/WhatsApp'
-import { FRANCHISE, FRANCHISE_MODELS, BRAND_STATS, SITE, waFranchise, MESSAGES } from '@/data/site'
+import { FRANCHISE, FRANCHISE_MODELS, SITE, waFranchise, MESSAGES } from '@/data/site'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -13,7 +13,7 @@ export default function FranchisePage() {
     <>
       <Seo
         title="Franchise - Mauli Family Paan House · Own a 35-year legacy"
-        description="Own a Mauli franchise from ₹3,00,000 - turnkey live paan counter, ROI in 3–5 months, ₹1 lakh+ monthly potential. India's first OG family paan house, since 1990."
+        description="Own a Mauli franchise from ₹3,00,000 - turnkey live paan counter, ROI in 3-5 months, ₹1 lakh+ monthly potential. India's first OG family paan house, since 1990."
       />
       <PageHero
         eyebrow="Franchise Opportunity · Since 1990"
@@ -45,18 +45,18 @@ export default function FranchisePage() {
             </div>
             <Reveal y={40}>
               <Parallax amount={28} className="aspect-[4/3] overflow-hidden rounded-2xl border border-gold-300/20 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.6)]">
-                <img src="/img/catering/logo.png" alt="Mauli paan counter at a celebration" className="h-[110%] w-full object-cover" loading="lazy" decoding="async" />
+                <img src="/img/catering/pov.JPG" alt="Mauli paan counter at a celebration" className="h-[110%] w-full object-cover" loading="lazy" decoding="async" />
               </Parallax>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 border-t border-gold-300/20 pt-12 md:grid-cols-4">
-            {BRAND_STATS.map((s, i) => (
+          <div className="mt-16 grid gap-4 border-t border-gold-300/20 pt-12 sm:grid-cols-3">
+            {FRANCHISE.stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 0.08}>
-                <div>
-                  <CountUp value={s.k} className="text-display block text-4xl font-bold gold-text md:text-5xl" />
-                  <div className="mt-2 text-[0.84rem] font-medium text-cream">{s.label}</div>
-                  <div className="text-[0.72rem] text-cream/45">{s.note}</div>
+                <div className="rounded-2xl border border-cream/10 bg-forest-900/40 p-7 text-center">
+                  <div className="text-display text-4xl font-bold gold-text md:text-5xl">{s.k}</div>
+                  <div className="mt-2 text-[0.86rem] font-semibold text-cream">{s.label}</div>
+                  <div className="mt-1 text-[0.72rem] text-cream/45">{s.note}</div>
                 </div>
               </Reveal>
             ))}
@@ -117,36 +117,6 @@ export default function FranchisePage() {
         </div>
       </section>
 
-      {/* the numbers */}
-      <section className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
-        <div className="mx-auto max-w-[1480px] px-6 md:px-10">
-          <div className="mb-12 text-center">
-            <Reveal><span className="eyebrow text-gold-600">The opportunity</span></Reveal>
-            <RevealHeading
-              text="Everything to start, operate & profit - from day one."
-              as="h2"
-              className="text-display mx-auto mt-3 max-w-[18ch] text-[clamp(1.8rem,4vw,3.2rem)] font-bold leading-[1.08] text-ink"
-            />
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {FRANCHISE.stats.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-8% 0px' }}
-                transition={{ duration: 0.8, ease: EASE, delay: i * 0.1 }}
-                className="rounded-2xl border border-forest-500/15 bg-white/70 p-8 text-center shadow-[0_10px_40px_-24px_rgba(0,0,0,0.4)]"
-              >
-                <div className="text-display text-5xl font-bold text-forest-600 md:text-6xl">{s.k}</div>
-                <div className="mt-3 text-[0.9rem] font-semibold text-ink">{s.label}</div>
-                <div className="mt-1 text-[0.74rem] text-muted">{s.note}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* what's included + counter render */}
       <section className="bg-forest-rich relative overflow-hidden py-24 md:py-32">
         <div className="mx-auto max-w-[1480px] px-6 md:px-10">
@@ -198,28 +168,31 @@ export default function FranchisePage() {
       </section>
 
       {/* why choose */}
-      <section className="bg-cream-rich relative overflow-hidden py-24 md:py-32">
+      <section className="bg-forest-emerald grain relative overflow-hidden py-24 md:py-32">
         <div className="mx-auto max-w-[1480px] px-6 md:px-10">
-          <div className="mb-12 max-w-[40ch]">
-            <Reveal><span className="eyebrow text-gold-600">Why Mauli</span></Reveal>
+          <div className="mb-12 max-w-[80ch]">
+            <Reveal><span className="eyebrow gold-text">Why Mauli</span></Reveal>
             <RevealHeading
               text="The perfect franchise product."
-              className="text-display mt-3 text-[clamp(1.8rem,4vw,3.2rem)] font-bold leading-[1.06] text-ink"
+              className="text-display mt-3 text-[clamp(1.8rem,4vw,3.2rem)] font-bold leading-[1.06] text-cream"
             />
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {FRANCHISE.why.map((w, i) => (
               <Reveal key={w.title} delay={(i % 3) * 0.08}>
-                <div className="h-full rounded-2xl border border-ink/10 bg-white/70 p-7">
-                  <div className="text-display text-2xl font-bold text-forest-600">0{i + 1}</div>
-                  <h3 className="text-display mt-3 text-xl font-bold text-ink">{w.title}</h3>
-                  <p className="mt-2 text-[0.84rem] leading-relaxed text-ink-soft">{w.body}</p>
+                <div className="h-full rounded-2xl border border-cream/10 bg-forest-900/40 p-7">
+                  <div className="text-display text-2xl font-bold gold-text">0{i + 1}</div>
+                  <h3 className="text-display mt-3 text-xl font-bold text-cream">{w.title}</h3>
+                  <p className="mt-2 text-[0.84rem] leading-relaxed text-cream/60">{w.body}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
+
+      {/* the network — moved from Visit */}
+      <FranchiseJourney />
 
       {/* closing CTA */}
       <section className="bg-forest-deep grain relative overflow-hidden py-24 md:py-32">

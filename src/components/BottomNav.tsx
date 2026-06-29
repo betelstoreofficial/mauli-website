@@ -23,9 +23,9 @@ const I = {
 const ITEMS: Item[] = [
   { to: '/', label: 'Home', icon: I.home },
   { to: '/the-paan', label: 'Paan', icon: I.leaf },
-  { to: '/gift-boxes', label: 'Boxes', icon: I.gift },
+  { to: '/shop', label: 'Shop', icon: I.gift },
   { to: '/catering', label: 'Events', icon: I.cater },
-  { to: '/visit', label: 'Visit', icon: I.pin },
+  { to: '/franchise', label: 'Franchise', icon: I.pin },
 ]
 
 /** Floating, Apple-style glass tab bar. Mobile & tablet only (desktop uses the top nav). */

@@ -30,8 +30,8 @@ export default function CateringPage() {
       <Steps
         eyebrow="How it works"
         heading="From enquiry to standing ovation."
-        tone="light"
-        bg="bg-cream-rich"
+        tone="dark"
+        bg="bg-forest-emerald"
         steps={[
           { title: 'Share your event', text: 'WhatsApp us your date, venue, guest count and the vibe you’re after.' },
           { title: 'Pick a package', text: 'Classic, Celebration or Grand - or we’ll craft a bespoke menu & quote.' },

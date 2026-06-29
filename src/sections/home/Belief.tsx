@@ -11,7 +11,7 @@ function Word({ word, index, total, progress }: { word: string; index: number; t
   return <motion.span style={{ color }}>{word}</motion.span>
 }
 
-/** The brand belief — kinetic type that lights up word-by-word as you scroll through. */
+/** The brand belief - kinetic type that lights up word-by-word as you scroll through. */
 export default function Belief() {
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.85', 'end 0.45'] })
@@ -24,7 +24,7 @@ export default function Belief() {
         </svg>
       </div>
 
-      <div className="relative mx-auto max-w-[1100px] px-6 text-center md:px-10">
+      <div className="relative mx-auto max-w-[11000px] px-6 text-center md:px-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -32,7 +32,7 @@ export default function Belief() {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <span className="eyebrow gold-text">माऊली · mother, protector, blessing</span>
+          <span className="eyebrow gold-text">माऊली</span>
         </motion.div>
 
         <p className="text-display flex flex-wrap justify-center gap-x-[0.28em] gap-y-1 text-[clamp(2rem,6vw,4.6rem)] font-bold leading-[1.1]">
@@ -48,7 +48,7 @@ export default function Belief() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="mx-auto mt-10 max-w-[52ch] text-[1rem] font-light leading-relaxed text-cream/55"
         >
-          A belief carried since 1990 — that the right paan is the perfect, healthy finish to every meal. Sweet enough to
+          A belief carried since 1990 - that the right paan is the perfect, healthy finish to every meal. Sweet enough to
           crave, pure enough to love.
         </motion.p>
       </div>

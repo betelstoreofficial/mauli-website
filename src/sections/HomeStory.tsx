@@ -8,7 +8,7 @@ const CHAPTERS = [
   { year: 'Today', place: 'India', text: '11+ outlets across Maharashtra & Gujarat, 211+ varieties, and a flagship paan-dessert house in Ahmedabad.' },
 ]
 
-/** Heritage beat — the 1990→today journey + proof stats. */
+/** Heritage beat - the 1990→today journey + proof stats. */
 export default function HomeStory() {
   return (
     <section className="bg-forest-rich grain relative overflow-hidden py-24 md:py-32">
