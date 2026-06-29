@@ -8,7 +8,7 @@ const CHAPTERS = [
   { year: 'Today', place: 'India', text: '11+ outlets across Maharashtra & Gujarat, 211+ varieties, and a flagship paan-dessert house in Ahmedabad.' },
 ]
 
-/** Brand meaning + belief + heritage, merged into one continuous panel. */
+/** Heritage beat — the 1990→today journey + proof stats. */
 export default function HomeStory() {
   return (
     <section className="bg-forest-rich grain relative overflow-hidden py-24 md:py-32">
@@ -19,20 +19,15 @@ export default function HomeStory() {
       </div>
 
       <div className="relative mx-auto max-w-[1100px] px-6 md:px-10">
-        {/* meaning + belief */}
-        <ScrollFade className="text-center">
-          <span className="eyebrow gold-text">माऊली</span>
-          <p className="text-display mx-auto mt-6 max-w-[24ch] text-[clamp(1.5rem,3.4vw,2.5rem)] font-medium leading-[1.32] text-cream">
-            In Marathi, <span className="gradient-gold italic">Mauli</span> means mother - protector, blessing, the hand
-            that nurtures. It's the spirit we fold into every paan.
-          </p>
-          <p className="text-display mx-auto mt-10 max-w-[20ch] text-[clamp(1.8rem,4.6vw,3.2rem)] font-bold italic leading-[1.15] text-cream">
-            “Dinner is not complete without a <span className="gradient-gold not-italic">paan.</span>”
-          </p>
+        <ScrollFade className="mb-16 text-center">
+          <span className="eyebrow gold-text">Our heritage</span>
+          <h2 className="text-display mx-auto mt-3 max-w-[16ch] text-[clamp(2rem,4.4vw,3.4rem)] font-bold leading-[1.1] text-cream">
+            Thirty-five years, folded by hand.
+          </h2>
         </ScrollFade>
 
         {/* heritage timeline - horizontal, chapters side by side */}
-        <ScrollFade className="mt-20">
+        <ScrollFade>
           <div className="relative grid gap-10 sm:grid-cols-3 sm:gap-6">
             {/* connecting line (desktop) */}
             <div className="pointer-events-none absolute left-[16.6%] right-[16.6%] top-[7px] hidden h-px bg-gradient-to-r from-gold-300/60 via-gold-400/60 to-gold-300/40 sm:block" />

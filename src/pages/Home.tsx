@@ -1,26 +1,28 @@
 import Seo from '@/components/Seo'
 import Marquee from '@/components/Marquee'
-import Hero from '@/sections/Hero'
+import HeroCanvas from '@/sections/home/HeroCanvas'
+import Belief from '@/sections/home/Belief'
+import Anatomy from '@/sections/home/Anatomy'
 import HomeStory from '@/sections/HomeStory'
 import Explore from '@/sections/Explore'
-import Testimonials from '@/sections/Testimonials'
 import FranchiseTeaser from '@/sections/FranchiseTeaser'
 import Visit from '@/sections/Visit'
 
-/** A single, continuous brand narrative - distinct from the catalog pages.
- *  Hero → trust → what Mauli means & heritage → wellness → craft → explore → proof → franchise → visit. */
+/** Home as a single scroll-choreographed canvas — paan reimagined as a healthy dessert.
+ *  Hero → trust → belief → the healthy dessert → heritage → three worlds → franchise → visit. */
 export default function Home() {
   return (
     <>
       <Seo
-        title="Mauli - Family Paan House · Dinner is not complete without a paan"
-        description="India's first OG family paan house since 1990. Premium Ayurvedic paan - 16 herbs, no tobacco - crafted fresh. Gift boxes, Pan-India products, luxury catering & franchise."
+        title="Mauli — Paan, reimagined as dessert · Family Paan House since 1990"
+        description="India's Ayurvedic family paan house since 1990. Sixteen herbs, zero tobacco — paan reimagined as a guilt-free dessert. Gift boxes, Pan-India products, luxury catering & franchise."
       />
-      <Hero />
+      <HeroCanvas />
       <Marquee />
+      <Belief />
+      <Anatomy />
       <HomeStory />
       <Explore />
-      <Testimonials />
       <FranchiseTeaser />
       <Visit />
     </>
